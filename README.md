@@ -41,3 +41,15 @@ g++ main.cpp -o dsu
 
 # 3. Run the executable
 ./dsu
+
+// Create a DSU instance for 5 elements (0 to 4)
+DSU dsu(5);
+
+// Merge sets using Union by Rank or Union by Size
+dsu.unionByRank(2, 3);
+dsu.unionByRank(0, 2);
+
+// Check if elements are connected
+if (dsu.isConnect(0, 3)) {
+    cout << "Connected" << endl;
+}
